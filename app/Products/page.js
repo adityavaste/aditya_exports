@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 
 const ProductsPage = () => {
-
-  // Set Launch Date
   const launchDate = new Date("2026-04-30T00:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
@@ -12,6 +10,11 @@ const ProductsPage = () => {
     minutes: 0,
     seconds: 0,
   });
+
+  // Format numbers (05 instead of 5)
+  const formatTime = (value) => {
+    return value < 10 ? `0${value}` : value;
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,11 +32,13 @@ const ProductsPage = () => {
           ),
           seconds: Math.floor((difference % (1000 * 60)) / 1000),
         });
+      } else {
+        clearInterval(interval);
       }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [launchDate]);
 
   return (
     <div
@@ -44,15 +49,15 @@ const ProductsPage = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-blue-950/60 backdrop-blur-sm"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-blue-950/70 backdrop-blur-sm"></div>
 
       <div className="relative z-10 text-center max-w-4xl animate-fadeIn">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-wide">
           Global Product Launch
         </h1>
 
-        <p className="text-lg md:text-xl font-bold text-blue-200 mb-10">
+        <p className="text-lg md:text-xl font-semibold text-blue-200 mb-10">
           Aditya Exports is preparing to launch premium agricultural products
           to international markets.
         </p>
@@ -60,30 +65,28 @@ const ProductsPage = () => {
         {/* Countdown */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           {[
-            { label: "Days", value: timeLeft.days },
-            { label: "Hours", value: timeLeft.hours },
-            { label: "Minutes", value: timeLeft.minutes },
-            { label: "Seconds", value: timeLeft.seconds },
+            { label: "Days", value: formatTime(timeLeft.days) },
+            { label: "Hours", value: formatTime(timeLeft.hours) },
+            { label: "Minutes", value: formatTime(timeLeft.minutes) },
+            { label: "Seconds", value: formatTime(timeLeft.seconds) },
           ].map((item, i) => (
             <div
               key={i}
               className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-blue-400 shadow-lg hover:scale-105 transition duration-300"
             >
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
                 {item.value}
               </h2>
-              <p className="text-blue-200 mt-2">{item.label}</p>
+              <p className="text-blue-200 mt-2 text-sm md:text-base">
+                {item.label}
+              </p>
             </div>
-
-            
           ))}
-
-          
         </div>
 
         {/* Email Subscription */}
-        <div className="bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-blue-400 shadow-xl">
-          <h3 className="text-2xl font-semibold mb-4">
+        <div className="bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-3xl border border-blue-400 shadow-xl">
+          <h3 className="text-xl md:text-2xl font-semibold mb-4">
             Get Notified When We Launch
           </h3>
 
@@ -104,17 +107,33 @@ const ProductsPage = () => {
           </form>
         </div>
 
-       {/* Animated Counter */}
-<div className="mt-12">
-  <h2 className="text-5xl font-bold text-white">
-    10+
-  </h2>
-  <p className="text-blue-300 mt-2">
-    Countries We Are Expanding To
-  </p>
-</div>
+        {/* Expansion Counter */}
+        <div className="mt-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            10+
+          </h2>
+          <p className="text-blue-300 mt-2 text-sm md:text-base">
+            Countries We Are Expanding To
+          </p>
+        </div>
       </div>
 
+      {/* Animation */}
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(25px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.8s ease forwards;
+        }
+      `}</style>
     </div>
   );
 };
