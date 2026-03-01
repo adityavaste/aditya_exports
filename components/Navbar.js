@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex justify-between items-center 
+      <nav className="flex justify-around items-center 
       px-6 sm:px-8 md:px-12 
       py-4 sm:py-5 md:py-6 
       shadow-md bg-white fixed w-full z-50">
@@ -26,7 +26,7 @@ const Navbar = () => {
           <a href="About_us" className="hover:text-green-700 transition">
             About us
           </a>
-          <a href="products" className="hover:text-green-700 transition">
+          <a href="Products" className="hover:text-green-700 transition">
             Products
           </a>
           <a href="Why_choose_us" className="hover:text-green-700 transition">
@@ -55,7 +55,7 @@ const Navbar = () => {
           <a href="About_us" className="block hover:text-green-700 transition">
             About us
           </a>
-          <a href="products" className="block hover:text-green-700 transition">
+          <a href="Products" className="block hover:text-green-700 transition">
             Products
           </a>
           <a href="Why_choose_us" className="block hover:text-green-700 transition">
