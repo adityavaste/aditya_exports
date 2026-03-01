@@ -47,7 +47,7 @@ const Main = () => {
       bg-[#1E90FF] hover:bg-[#187bcd] 
       rounded-full 
       text-base sm:text-lg 
-      font-semibold shadow-xl transition">Explore Products
+      font-semibold shadow-xl transition text-center">Explore Products
 </Link>
 
             <Link
