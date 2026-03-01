@@ -52,8 +52,8 @@ const ProductsPage = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-blue-950/70 backdrop-blur-sm"></div>
 
-      <div className="relative z-10 text-center max-w-4xl animate-fadeIn">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-wide">
+      <div className="relative z-5 text-center max-w-4xl animate-fadeIn">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 mt-25 tracking-wide">
           Global Product Launch
         </h1>
 
