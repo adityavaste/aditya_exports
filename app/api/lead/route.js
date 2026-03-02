@@ -1,5 +1,11 @@
 import nodemailer from "nodemailer";
 import { google } from "googleapis";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 export async function POST(req) {
   try {
@@ -12,26 +18,32 @@ export async function POST(req) {
     // ===============================
     // 1️⃣ SAVE TO GOOGLE SHEET
     // ===============================
-    const auth = new google.auth.GoogleAuth({
-      credentials: {
-        client_email: process.env.GOOGLE_CLIENT_EMAIL,
-        private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
-      },
-      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-    });
+  const auth = new google.auth.GoogleAuth({
+  credentials: {
+    client_email: process.env.GOOGLE_CLIENT_EMAIL,
+    private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+  },
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+});
 
-    const sheets = google.sheets({ version: "v4", auth });
+const sheets = google.sheets({ version: "v4", auth });
 
-    await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "Sheet1!A:C",
-      valueInputOption: "USER_ENTERED",
-      requestBody: {
-        values: [
-          [email, country, new Date().toLocaleString()],
-        ],
-      },
-    });
+// ✅ Get IST Time (important for Vercel)
+const now = dayjs().tz("Asia/Kolkata");
+
+const date = now.format("YYYY-MM-DD");   // 2026-03-02
+const time = now.format("HH:mm:ss");     // 23:54:18
+
+await sheets.spreadsheets.values.append({
+  spreadsheetId: process.env.GOOGLE_SHEET_ID,
+  range: "Sheet1!A:D",
+  valueInputOption: "USER_ENTERED",
+  requestBody: {
+    values: [
+      [email, country, date, time],
+    ],
+  },
+});
 
     // ===============================
     // 2️⃣ SEND EMAIL
