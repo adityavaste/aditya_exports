@@ -61,7 +61,7 @@ Thank you.`;
       body: JSON.stringify({ email: leadEmail, country }),
     });
 
-    alert("Thank you! Our export team will contact you shortly.");
+    alert("Catalogue sent to your email successfully!");
     setLeadEmail("");
   };
 
@@ -123,7 +123,7 @@ Thank you.`;
           mb-4 text-sm sm:text-base
         "
       >
-        Chat With Export Consultant
+        Chat With Selling Team
       </a>
 
       {/* Lead Form */}

@@ -9,7 +9,7 @@ const Main = () => {
       {/* HERO SECTION */}
       <div
         className="relative h-screen bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: "url('/ship.jpg')" }}
+        style={{ backgroundImage: "url('/ship.webp')" }}
       >
         {/* Dark Luxury Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/85 to-black/70"></div>
@@ -99,7 +99,7 @@ const Main = () => {
     p-5 sm:p-6 text-center"
           >
             <img
-              src="/certificate1.jpg"
+              src="/Fssai.webp"
               alt="FSSAI Certificate"
               className="w-full 
         h-48 sm:h-56 md:h-64 
@@ -118,7 +118,7 @@ const Main = () => {
     p-5 sm:p-6 text-center"
           >
             <img
-              src="/certificate2.jpg"
+              src="/iso.png"
               alt="ISO Certificate"
               className="w-full 
         h-48 sm:h-56 md:h-64 
@@ -137,7 +137,7 @@ const Main = () => {
     p-5 sm:p-6 text-center"
           >
             <img
-              src="/certificate3.jpg"
+              src="/Apeda.webp"
               alt="APEDA Certificate"
               className="w-full 
         h-48 sm:h-56 md:h-64 
@@ -179,7 +179,7 @@ const Main = () => {
       transition duration-300 p-5 sm:p-6 text-center"
             >
               <img
-                src="/onion.jpg"
+                src="/onion.webp"
                 alt="Onion"
                 className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
               />
@@ -198,7 +198,7 @@ const Main = () => {
       transition duration-300 p-5 sm:p-6 text-center"
             >
               <img
-                src="/potato.jpg"
+                src="/potato.webp"
                 alt="Potato"
                 className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
               />
@@ -216,7 +216,7 @@ const Main = () => {
       transition duration-300 p-5 sm:p-6 text-center"
             >
               <img
-                src="/ginger.jpg"
+                src="/ginger.webp"
                 alt="Ginger"
                 className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
               />
@@ -240,7 +240,7 @@ const Main = () => {
       transition duration-300 p-5 sm:p-6 text-center"
             >
               <img
-                src="/tomato.jpg"
+                src="/tomato.webp"
                 alt="Tomato"
                 className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
               />
@@ -258,7 +258,7 @@ const Main = () => {
       transition duration-300 p-5 sm:p-6 text-center"
             >
               <img
-                src="/greenchilli.jpg"
+                src="/greenchilli.webp"
                 alt="Green Chilli"
                 className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
               />
