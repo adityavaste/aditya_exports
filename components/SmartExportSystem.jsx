@@ -108,24 +108,6 @@ Thank you.`;
         />
       )}
 
-      {/* WhatsApp CTA */}
-      <a
-        href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-          aiMessage
-        )}`}
-        target="_blank"
-        className="
-          block text-center 
-          bg-gradient-to-r from-blue-700 to-sky-500 
-          text-white py-2 sm:py-3 
-          rounded-full 
-          hover:scale-105 transition 
-          mb-4 text-sm sm:text-base
-        "
-      >
-        Chat With Selling Team
-      </a>
-
       {/* Lead Form */}
       <form onSubmit={handleLeadSubmit} className="space-y-3">
         <input
