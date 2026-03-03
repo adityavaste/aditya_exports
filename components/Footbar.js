@@ -33,7 +33,7 @@ const Footbar = () => {
             <ul className="space-y-2 text-blue-100 text-sm sm:text-base">
               <li><a href="Home" className="hover:text-white transition">Home</a></li>
               <li><a href="About_us" className="hover:text-white transition">About Us</a></li>
-              <li><a href="products" className="hover:text-white transition">Products</a></li>
+              <li><a href="Products" className="hover:text-white transition">Products</a></li>
               <li><a href="Contact" className="hover:text-white transition">Contact</a></li>
             </ul>
           </div>
