@@ -31,7 +31,7 @@ const SmartExportSystem = () => {
           setRegionText("Supplying premium exports across Europe");
         } else {
           setRegionText(
-            "Exporting globally with trusted logistics partners"
+            "Click once to receive today’s updated export price list."
           );
         }
       } catch (error) {
@@ -107,24 +107,6 @@ Thank you.`;
           className="w-8 h-5 sm:w-10 sm:h-6 mb-4 rounded shadow mx-auto lg:mx-0"
         />
       )}
-
-      {/* WhatsApp CTA */}
-      <a
-        href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-          aiMessage
-        )}`}
-        target="_blank"
-        className="
-          block text-center 
-          bg-gradient-to-r from-blue-700 to-sky-500 
-          text-white py-2 sm:py-3 
-          rounded-full 
-          hover:scale-105 transition 
-          mb-4 text-sm sm:text-base
-        "
-      >
-        Chat With Selling Team
-      </a>
 
       {/* Lead Form */}
       <form onSubmit={handleLeadSubmit} className="space-y-3">
