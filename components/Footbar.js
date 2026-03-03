@@ -61,7 +61,12 @@ const Footbar = () => {
               📞 +91 7350247244
             </p>
             <p className="text-blue-100 mt-2 text-sm sm:text-base">
-              ✉ example@gmail.com
+              <a
+  href="mailto:info@adityaexports.com"
+  className="hover:underline"
+>
+  ✉ info@adityaexports.com
+</a>
             </p>
             <p className="text-blue-100 mt-2 text-sm sm:text-base leading-relaxed">
               Industrial Area,<br /> India
