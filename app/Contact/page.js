@@ -1,15 +1,18 @@
-
-
 "use client";
 import React, { useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [form, setForm] = useState({
     name: "",
+    company: "",
+    country: "",
     email: "",
     phone: "",
+    quantity: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,19 +20,34 @@ const page = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+    try {
+      const res = await fetch("/api/lead1", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    if (res.ok) {
-      alert("Message sent successfully!");
-      setForm({ name: "", email: "", phone: "", message: "" });
-    } else {
-      alert("Failed to send message");
+      if (res.ok) {
+        alert("Inquiry Submitted Successfully!");
+        setForm({
+          name: "",
+          company: "",
+          country: "",
+          email: "",
+          phone: "",
+          quantity: "",
+          message: "",
+        });
+      } else {
+        alert("Something went wrong.");
+      }
+    } catch (error) {
+      alert("Server error.");
     }
+
+    setLoading(false);
   };
 
   return (
@@ -57,7 +75,7 @@ const page = () => {
           </h2>
 
           <div className="space-y-5 sm:space-y-6 text-gray-700 text-base sm:text-lg">
-            
+
             <div className="bg-white p-5 sm:p-6 rounded-2xl shadow-md border border-blue-100">
               <p className="font-semibold text-blue-800">Phone</p>
               <p className="break-all">+91 7350247244</p>
@@ -87,66 +105,67 @@ const page = () => {
         <div className="bg-white/90 backdrop-blur-lg rounded-2xl sm:rounded-3xl 
         shadow-xl p-6 sm:p-8 md:p-10 border border-blue-100">
 
-          <h2 className="text-2xl sm:text-3xl font-semibold text-blue-900 mb-6 sm:mb-8">
-            Send Us a Message
+          <h2 className="text-2xl sm:text-3xl font-semibold text-blue-900 mb-2">
+            Request Export Quote
           </h2>
+
+          <p className="text-sm sm:text-base text-gray-600 mb-6">
+            Get FOB pricing, MOQ details & shipment timeline within 30 minutes.
+          </p>
 
           <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
 
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-            />
-
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone Number"
-              value={form.phone}
-              onChange={handleChange}
-              className="w-full px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-            />
+            {[
+              { name: "name", placeholder: "Full Name (Required)", required: true },
+              { name: "company", placeholder: "Company Name" },
+              { name: "country", placeholder: "Country (For Shipping Calculation)", required: true },
+              { name: "email", placeholder: "Business Email Address", type: "email", required: true },
+              { name: "phone", placeholder: "WhatsApp Number (For Quick Response)" },
+              { name: "quantity", placeholder: "Required Quantity (e.g., 1 Ton / 500 Kg)" },
+            ].map((field, i) => (
+              <input
+                key={i}
+                type={field.type || "text"}
+                name={field.name}
+                placeholder={field.placeholder}
+                required={field.required || false}
+                value={form[field.name]}
+                onChange={handleChange}
+                className="w-full px-4 sm:px-5 py-3 text-sm sm:text-base border border-blue-200 rounded-xl 
+                focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              />
+            ))}
 
             <textarea
               rows={4}
               name="message"
-              placeholder="Your Message"
+              placeholder="Tell us your product requirement (Packaging, Private Label, Target Port, etc.)"
               value={form.message}
               onChange={handleChange}
               required
-              className="w-full px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition resize-none"
-            ></textarea>
+              className="w-full px-4 sm:px-5 py-3 text-sm sm:text-base border border-blue-200 rounded-xl 
+              focus:outline-none focus:ring-2 focus:ring-blue-400 transition resize-none"
+            />
 
             <button
               type="submit"
-              className="w-full py-2.5 sm:py-3 rounded-full bg-blue-600 text-white font-semibold text-sm sm:text-base
-              hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl active:scale-95"
+              disabled={loading}
+              className="w-full py-3 rounded-full bg-blue-600 text-white font-semibold text-sm sm:text-base
+              hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl active:scale-95 disabled:opacity-60"
             >
-              Send Message
+              {loading ? "Submitting..." : "Get Export Pricing Now"}
             </button>
+
+            <p className="text-xs sm:text-sm text-gray-500 text-center">
+              ✔ 100% Confidential Inquiry • ✔ Export Certified • ✔ Fast Response
+            </p>
 
           </form>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="text-center pb-16 sm:pb-20 md:pb-24 px-4">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-900 mb-3 sm:mb-4">
+      <section className="text-center pb-20 px-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-900 mb-3">
           Trusted Export & Manufacturing Partner
         </h2>
         <p className="text-gray-600 text-sm sm:text-base">
@@ -158,4 +177,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

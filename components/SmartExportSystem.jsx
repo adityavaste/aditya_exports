@@ -31,7 +31,7 @@ const SmartExportSystem = () => {
           setRegionText("Supplying premium exports across Europe");
         } else {
           setRegionText(
-            "Exporting globally with trusted logistics partners"
+            "Get today’s latest export price list instantly — just one click away."
           );
         }
       } catch (error) {
