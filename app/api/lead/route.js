@@ -35,7 +35,7 @@ const date = now.format("YYYY-MM-DD");   // 2026-03-02
 const time = now.format("HH:mm:ss");     // 23:54:18
 
 await sheets.spreadsheets.values.append({
-  spreadsheetId: process.env.GOOGLE_SHEET_ID,
+  spreadsheetId: process.env.GOOGLE_SHEET_ID1,
   range: "Sheet1!A:D",
   valueInputOption: "USER_ENTERED",
   requestBody: {
@@ -56,7 +56,7 @@ await sheets.spreadsheets.values.append({
       },
     });
 
-    const pdfLink = `https://docs.google.com/spreadsheets/d/${process.env.GOOGLE_SHEET_ID}/export?format=pdf`;
+    const pdfLink = `https://docs.google.com/spreadsheets/d/${process.env.GOOGLE_SHEET_ID2}/export?format=pdf`;
 
     await transporter.sendMail({
       from: `"Aditya Exports" <${process.env.EMAIL_USER}>`,
