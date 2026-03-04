@@ -55,7 +55,7 @@ const Navbar = () => {
           <a href="/about-us" className="block hover:text-green-700 transition">
             About us
           </a>
-          <a href="/products" className="block hover:text-green-700 transition">
+          <a href="/products/product-page" className="block hover:text-green-700 transition">
             Products
           </a>
           <a href="/why-choose-us" className="block hover:text-green-700 transition">
