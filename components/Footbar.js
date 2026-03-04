@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footbar = () => {
   return (
@@ -31,10 +32,10 @@ const Footbar = () => {
               Quick Links
             </h3>
             <ul className="space-y-2 text-blue-100 text-sm sm:text-base">
-              <li><a href="Home" className="hover:text-white transition">Home</a></li>
-              <li><a href="About_us" className="hover:text-white transition">About Us</a></li>
-              <li><a href="Products" className="hover:text-white transition">Products</a></li>
-              <li><a href="Contact" className="hover:text-white transition">Contact</a></li>
+              <li><Link href="/landing">Home</Link></li>
+              <li><Link href="/about-us">About Us</Link></li>
+              <li><Link href="/products/product-page">Products</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 
