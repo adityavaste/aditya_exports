@@ -49,19 +49,19 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden fixed top-[70px] left-0 w-full bg-white shadow-lg py-6 px-6 space-y-4 text-gray-700 font-medium z-40">
-          <a href="Home" className="block hover:text-green-700 transition">
+          <a href="/landing" className="block hover:text-green-700 transition">
             Home
           </a>
-          <a href="About_us" className="block hover:text-green-700 transition">
+          <a href="/about-us" className="block hover:text-green-700 transition">
             About us
           </a>
-          <a href="Products" className="block hover:text-green-700 transition">
+          <a href="/products" className="block hover:text-green-700 transition">
             Products
           </a>
-          <a href="Why_choose_us" className="block hover:text-green-700 transition">
+          <a href="/why-choose-us" className="block hover:text-green-700 transition">
             Why choose us
           </a>
-          <a href="Contact" className="block hover:text-green-700 transition">
+          <a href="/contact" className="block hover:text-green-700 transition">
             Contact
           </a>
         </div>
