@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import SmartExportSystem from "./SmartExportSystem";
 
 const Main = () => {
   return (
     <div>
+      <SmartExportSystem />
       {/* HERO SECTION */}
       <div
         className="relative h-screen bg-cover bg-center overflow-hidden"
@@ -91,188 +93,204 @@ const Main = () => {
   max-w-6xl mx-auto 
   grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
   gap-6 sm:gap-8 md:gap-10"
-        >
-          {/* Certificate 1 */}
-          <div
-            className="bg-gray-50 rounded-2xl shadow-md 
-    hover:shadow-xl transition duration-300 
-    p-5 sm:p-6 text-center"
-          >
-            <img
-              src="/Fssai.webp"
-              alt="FSSAI Certificate"
-              className="w-full 
-        h-48 sm:h-56 md:h-64 
-        object-contain rounded-lg mb-4"
-            />
+        >            
 
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-              FSSAI Certified
-            </h3>
-          </div>
+
+
+
+  {/* Certificate 1 */}
+
+
+  <div
+  className="bg-gray-50 rounded-2xl shadow-md 
+  hover:shadow-xl transition duration-300 
+  p-5 sm:p-6 text-center"
+>
+  <div className="relative">
+    <img
+      src="/Fssai.webp"
+      alt="FSSAI Certificate"
+      className="w-full 
+      h-48 sm:h-56 md:h-64 
+      object-contain rounded-lg"
+    />
+
+    {/* Coming Soon Overlay */}
+    <div className="absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
+      <span className="text-white text-lg sm:text-xl font-bold tracking-wide">
+        Coming Soon
+      </span>
+    </div>
+  </div>
+
+  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mt-4">
+    FSSAI Certified
+  </h3>
+</div>
 
           {/* Certificate 2 */}
           <div
-            className="bg-gray-50 rounded-2xl shadow-md 
-    hover:shadow-xl transition duration-300 
-    p-5 sm:p-6 text-center"
-          >
-            <img
-              src="/iso.png"
-              alt="ISO Certificate"
-              className="w-full 
-        h-48 sm:h-56 md:h-64 
-        object-contain rounded-lg mb-4"
-            />
+  className="bg-gray-50 rounded-2xl shadow-md 
+  hover:shadow-xl transition duration-300 
+  p-5 sm:p-6 text-center"
+>
+  <div className="relative">
+    <img
+      src="/iso.png"
+      alt="ISO Certificate"
+      className="w-full 
+      h-48 sm:h-56 md:h-64 
+      object-contain rounded-lg"
+    />
 
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-              ISO Certified
-            </h3>
-          </div>
+    {/* Coming Soon Overlay */}
+    <div className="absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
+      <span className="text-white text-lg sm:text-xl font-bold tracking-wide">
+        Coming Soon
+      </span>
+    </div>
+  </div>
+
+  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mt-4">
+    ISO Certified
+  </h3>
+</div>
 
           {/* Certificate 3 */}
-          <div
-            className="bg-gray-50 rounded-2xl shadow-md 
-    hover:shadow-xl transition duration-300 
-    p-5 sm:p-6 text-center"
-          >
+         <div
+  className="bg-gray-50 rounded-2xl shadow-md 
+  hover:shadow-xl transition duration-300 
+  p-5 sm:p-6 text-center"
+>
+  <div className="relative">
+    <img
+      src="/Apeda.webp"
+      alt="APEDA Certificate"
+      className="w-full 
+      h-48 sm:h-56 md:h-64 
+      object-contain rounded-lg"
+    />
+
+    {/* Coming Soon Overlay */}
+    <div className="absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
+      <span className="text-white text-lg sm:text-xl font-bold tracking-wide">
+        Coming Soon
+      </span>
+    </div>
+  </div>
+
+  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mt-4">
+    APEDA Registered
+  </h3>
+</div>
+        </div>
+      </div>
+
+     <div className="py-14 sm:py-16 md:py-20 bg-gray-100 px-4 sm:px-6 lg:px-8">
+  <h2
+    className="text-3xl sm:text-4xl md:text-5xl 
+    font-bold text-center text-gray-800 
+    mt-10 sm:mt-14 md:mt-20 leading-tight"
+  >
+    Our Fresh Products
+  </h2>
+
+  <p
+    className="text-center text-gray-600 
+    mt-4 sm:mt-6 
+    max-w-xl sm:max-w-2xl mx-auto 
+    text-base sm:text-lg md:text-2xl"
+  >
+    We export high-quality farm-fresh vegetables carefully selected to
+    meet international standards.
+  </p>
+
+  <div className="mt-10 sm:mt-12 max-w-6xl mx-auto">
+    
+    {/* First Row */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+
+      {/* Product Card */}
+      {[
+        { src: "/onion.webp", name: "Onion", desc: "Fresh, premium quality onions sourced directly from trusted farms." },
+        { src: "/potato.webp", name: "Potato", desc: "High-grade potatoes ideal for global markets and bulk supply." },
+        { src: "/ginger.webp", name: "Ginger", desc: "Naturally grown ginger with rich aroma and superior freshness." }
+      ].map((product, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-xl shadow-md hover:shadow-xl 
+          transition duration-300 p-5 sm:p-6 text-center"
+        >
+          <div className="relative group">
             <img
-              src="/Apeda.webp"
-              alt="APEDA Certificate"
-              className="w-full 
-        h-48 sm:h-56 md:h-64 
-        object-contain rounded-lg mb-4"
+              src={product.src}
+              alt={product.name}
+              className="w-full h-44 sm:h-48 md:h-52 object-cover 
+              rounded-lg transition duration-300 group-hover:scale-105"
             />
 
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-              APEDA Registered
-            </h3>
+            {/* Coming Soon Overlay */}
+            <div className="absolute inset-0 bg-black/60 rounded-lg 
+              flex items-center justify-center">
+              <span className="text-white text-lg font-bold tracking-wide">
+                Coming Soon
+              </span>
+            </div>
           </div>
+
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mt-4">
+            {product.name}
+          </h3>
+          <p className="mt-2 text-gray-600 text-xs sm:text-sm">
+            {product.desc}
+          </p>
         </div>
-      </div>
+      ))}
 
-      <div className="py-14 sm:py-16 md:py-20 bg-gray-100 px-4 sm:px-6 lg:px-8">
-        <h2
-          className="text-3xl sm:text-4xl md:text-5xl 
-  font-bold text-center text-gray-800 
-  mt-10 sm:mt-14 md:mt-20 leading-tight"
+    </div>
+
+    {/* Second Row */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mt-8 md:w-2/3 mx-auto">
+
+      {[
+        { src: "/tomato.webp", name: "Tomato", desc: "Juicy, vibrant tomatoes carefully selected for export quality." },
+        { src: "/greenchilli.webp", name: "Green Chilli", desc: "Fresh and spicy green chillies packed with flavor and quality." }
+      ].map((product, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-xl shadow-md hover:shadow-xl 
+          transition duration-300 p-5 sm:p-6 text-center"
         >
-          Our Fresh Products
-        </h2>
+          <div className="relative group">
+            <img
+              src={product.src}
+              alt={product.name}
+              className="w-full h-44 sm:h-48 md:h-52 object-cover 
+              rounded-lg transition duration-300 group-hover:scale-105"
+            />
 
-        <p
-          className="text-center text-gray-600 
-  mt-4 sm:mt-6 
-  max-w-xl sm:max-w-2xl mx-auto 
-  text-base sm:text-lg md:text-2xl"
-        >
-          We export high-quality farm-fresh vegetables carefully selected to
-          meet international standards.
-        </p>
-
-        <div className="mt-10 sm:mt-12 max-w-6xl mx-auto">
-          {/* First Row - 3 Products */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            {/* Product 1 */}
-            <div
-              className="bg-white rounded-xl shadow-md hover:shadow-xl 
-      transition duration-300 p-5 sm:p-6 text-center"
-            >
-              <img
-                src="/onion.webp"
-                alt="Onion"
-                className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
-                Onion
-              </h3>
-              <p className="mt-2 text-gray-600 text-xs sm:text-sm">
-                Fresh, premium quality onions sourced directly from trusted
-                farms.
-              </p>
-            </div>
-
-            {/* Product 2 */}
-            <div
-              className="bg-white rounded-xl shadow-md hover:shadow-xl 
-      transition duration-300 p-5 sm:p-6 text-center"
-            >
-              <img
-                src="/potato.webp"
-                alt="Potato"
-                className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
-                Potato
-              </h3>
-              <p className="mt-2 text-gray-600 text-xs sm:text-sm">
-                High-grade potatoes ideal for global markets and bulk supply.
-              </p>
-            </div>
-
-            {/* Product 3 */}
-            <div
-              className="bg-white rounded-xl shadow-md hover:shadow-xl 
-      transition duration-300 p-5 sm:p-6 text-center"
-            >
-              <img
-                src="/ginger.webp"
-                alt="Ginger"
-                className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
-                Ginger
-              </h3>
-              <p className="mt-2 text-gray-600 text-xs sm:text-sm">
-                Naturally grown ginger with rich aroma and superior freshness.
-              </p>
+            {/* Coming Soon Overlay */}
+            <div className="absolute inset-0 bg-black/60 rounded-lg 
+              flex items-center justify-center">
+              <span className="text-white text-lg font-bold tracking-wide">
+                Coming Soon
+              </span>
             </div>
           </div>
 
-          {/* Second Row - 2 Products Centered */}
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 
-    mt-8 md:w-2/3 mx-auto"
-          >
-            {/* Product 4 */}
-            <div
-              className="bg-white rounded-xl shadow-md hover:shadow-xl 
-      transition duration-300 p-5 sm:p-6 text-center"
-            >
-              <img
-                src="/tomato.webp"
-                alt="Tomato"
-                className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
-                Tomato
-              </h3>
-              <p className="mt-2 text-gray-600 text-xs sm:text-sm">
-                Juicy, vibrant tomatoes carefully selected for export quality.
-              </p>
-            </div>
-
-            {/* Product 5 */}
-            <div
-              className="bg-white rounded-xl shadow-md hover:shadow-xl 
-      transition duration-300 p-5 sm:p-6 text-center"
-            >
-              <img
-                src="/greenchilli.webp"
-                alt="Green Chilli"
-                className="w-full h-44 sm:h-48 md:h-52 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
-                Green Chilli
-              </h3>
-              <p className="mt-2 text-gray-600 text-xs sm:text-sm">
-                Fresh and spicy green chillies packed with flavor and quality.
-              </p>
-            </div>
-          </div>
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mt-4">
+            {product.name}
+          </h3>
+          <p className="mt-2 text-gray-600 text-xs sm:text-sm">
+            {product.desc}
+          </p>
         </div>
-      </div>
+      ))}
 
+    </div>
+
+  </div>
+</div>
       {/* Export Countries Section */}
       <div className="py-14 sm:py-16 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
         <h2
