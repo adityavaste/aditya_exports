@@ -49,11 +49,11 @@ const ProductsPage = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-blue-950/70 backdrop-blur-sm"></div>
 
-      <div className="relative z-5 text-center max-w-4xl animate-fadeIn">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 mt-25 tracking-wide">
+      <div className="relative z-10 text-center max-w-4xl animate-fadeIn">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 mt-20 tracking-wide">
           Global Product Launch
         </h1>
 
@@ -84,27 +84,46 @@ const ProductsPage = () => {
           ))}
         </div>
 
-        {/* Email Subscription */}
-        <div className="bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-3xl border border-blue-400 shadow-xl">
-          <h3 className="text-xl md:text-2xl font-semibold mb-4">
-            Get Notified When We Launch
+        {/* Export Price List Form */}
+        <div className="bg-white/10 backdrop-blur-xl p-8 md:p-10 rounded-3xl border border-blue-400/40 shadow-2xl max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">
+            Get Today's Export Price List 📦
           </h3>
 
-          <form className="flex flex-col md:flex-row gap-4 justify-center">
+          <p className="text-blue-100 mb-6 text-sm md:text-base">
+            Receive our latest product catalogue and international pricing directly in your inbox.
+          </p>
+
+          <form className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <input
               type="email"
-              placeholder="Enter your email"
-              className="px-6 py-3 rounded-full text-black w-full md:w-96 focus:outline-none bg-white"
+              placeholder="Enter your business email"
+              className="px-6 py-3 rounded-full text-black w-full md:w-96 focus:outline-none bg-white shadow-md"
               required
             />
 
+            <select
+              className="px-5 py-3 rounded-full text-black bg-white focus:outline-none shadow-md w-full md:w-56"
+            >
+              <option>Select Country</option>
+              <option>UAE</option>
+              <option>Germany</option>
+              <option>UK</option>
+              <option>Singapore</option>
+              <option>Other</option>
+            </select>
+
             <button
               type="submit"
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-sky-500 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-lg"
+              className="px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-500 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-xl text-white"
             >
-              Notify Me
+              Get Price List
             </button>
           </form>
+
+          <p className="text-xs text-blue-200 mt-4">
+            We reply within 5 minutes during business hours.
+          </p>
         </div>
 
         {/* Expansion Counter */}

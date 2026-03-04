@@ -76,7 +76,7 @@ const page = () => {
           {/* Assured Quality */}
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 p-6 sm:p-8 text-center">
             <img
-              src="/quality.jpg"
+              src="/Assured_Quality.webp"
               alt="Assured Quality"
               className="w-16 sm:w-20 h-16 sm:h-20 mx-auto mb-6 object-contain"
             />
@@ -92,7 +92,7 @@ const page = () => {
           {/* Customer Satisfaction */}
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 p-6 sm:p-8 text-center">
             <img
-              src="/customer.jpg"
+              src="/Customer_Satisfaction.webp"
               alt="Customer Satisfaction"
               className="w-16 sm:w-20 h-16 sm:h-20 mx-auto mb-6 object-contain"
             />
@@ -108,7 +108,7 @@ const page = () => {
           {/* Competitive Rates */}
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 p-6 sm:p-8 text-center">
             <img
-              src="/price.jpg"
+              src="/Competitive_Rates.webp"
               alt="Competitive Rates"
               className="w-16 sm:w-20 h-16 sm:h-20 mx-auto mb-6 object-contain"
             />
@@ -136,7 +136,7 @@ const page = () => {
         </p>
 
         <a
-          href="#contact"
+          href="Contact"
           className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 
           rounded-full bg-white text-blue-700 font-semibold 
           hover:bg-blue-100 transition duration-300 shadow-lg text-sm sm:text-base"

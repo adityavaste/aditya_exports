@@ -83,7 +83,7 @@ const Page = () => {
 
             <div className="bg-white p-5 sm:p-6 rounded-2xl shadow-md border border-blue-100">
               <p className="font-semibold text-blue-800">Email</p>
-              <p className="break-all">example@gmail.com</p>
+              <p className="break-all">info@adityaexports.com</p>
             </div>
 
             <div className="bg-white p-5 sm:p-6 rounded-2xl shadow-md border border-blue-100">
