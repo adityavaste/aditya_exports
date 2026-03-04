@@ -8,59 +8,40 @@ const Main = () => {
   return (
     <div>
       <SmartExportSystem />
+
       {/* HERO SECTION */}
       <div
         className="relative h-screen bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: "url('/ship.webp')" }}
       >
-        {/* Dark Luxury Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/85 to-black/70"></div>
 
-        {/* Content */}
-        <div
-          className="relative z-10 flex flex-col justify-center h-full 
-  px-6 sm:px-8 md:px-16 lg:px-24 
-  text-white max-w-5xl"
-        >
-          <h1
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-6xl 
-    font-extrabold leading-tight tracking-wide"
-          >
-            Global Agricultural Excellence <br />
-            <span className="text-[#D4AF37]">Aditya Exports</span>
+        <div className="relative z-10 flex flex-col justify-center h-full px-6 sm:px-8 md:px-16 lg:px-24 text-white max-w-5xl">
+          {/* SEO H1 */}
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-6xl font-extrabold leading-tight tracking-wide">
+            Leading Fresh Vegetable Exporter from India <br />
+            <span className="text-[#D4AF37]">Supplying UAE, USA & Europe</span>
           </h1>
 
-          <p
-            className="mt-6 sm:mt-8 
-    text-base sm:text-lg md:text-xl 
-    text-gray-300 max-w-2xl"
-          >
-            Delivering premium farm-fresh vegetables across international
-            markets with precision logistics and uncompised quality standards.
+          {/* SEO Description */}
+          <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl">
+            Aditya Exports is a trusted Indian fresh vegetable exporter
+            supplying onion, potato, tomato, ginger and green chilli to UAE, USA
+            and European markets with international quality standards and
+            reliable export logistics.
           </p>
 
-          <div
-            className="mt-8 sm:mt-10 
-    flex flex-col sm:flex-row 
-    gap-4 sm:gap-6"
-          >
-            <Link href="Products" className="px-6 sm:px-8 md:px-10 
-      py-3 sm:py-4 
-      bg-[#1E90FF] hover:bg-[#187bcd] 
-      rounded-full 
-      text-base sm:text-lg 
-      font-semibold shadow-xl transition text-center">Explore Products
-</Link>
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <Link
+              href="/products"
+              className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#1E90FF] hover:bg-[#187bcd] rounded-full text-base sm:text-lg font-semibold shadow-xl transition text-center"
+            >
+              Explore Products
+            </Link>
 
             <Link
-              href="/Contact"
-              className="px-6 sm:px-8 md:px-10 
-                      py-3 sm:py-4 
-                            border border-[#D4AF37] text-[#D4AF37] 
-                       rounded-full 
-                      text-base font-bold sm:text-lg 
-                          hover:bg-[#D4AF37] hover:text-black 
-                        transition inline-block text-center"
+              href="/contact"
+              className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 border border-[#D4AF37] text-[#D4AF37] rounded-full text-base font-bold sm:text-lg hover:bg-[#D4AF37] hover:text-black transition text-center"
             >
               Contact Us
             </Link>
@@ -68,306 +49,288 @@ const Main = () => {
         </div>
       </div>
 
-      {/* Certificate  */}
-      <div className="py-16 sm:py-20 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
-        <h2
-          className="text-3xl sm:text-4xl md:text-5xl 
-  font-bold text-center text-gray-800 leading-tight"
-        >
-          Government Recognized & Internationally Certified
-        </h2>
+    {/* CERTIFICATE SECTION */}
+<section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white px-4 sm:px-6 lg:px-8">
 
-        <p
-          className="text-center text-black 
-  mt-4 sm:mt-6 
-  max-w-xl sm:max-w-2xl mx-auto 
-  text-base sm:text-lg md:text-xl"
-        >
-          We operate under strict compliance with Indian Government regulations
-          and international export standards. Our certifications ensure quality,
-          safety, and reliability for global trade partners.
-        </p>
+  <div className="max-w-6xl mx-auto text-center">
+    
+    <h2 className="
+      text-2xl 
+      sm:text-3xl 
+      md:text-4xl 
+      lg:text-5xl
+      font-bold 
+      text-gray-800 
+      leading-tight
+    ">
+      Government Recognized & Internationally Certified Exporter from India
+    </h2>
 
-        <div
-          className="mt-12 sm:mt-16 
-  max-w-6xl mx-auto 
-  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
-  gap-6 sm:gap-8 md:gap-10"
-        >            
+    <p className="
+      text-gray-700 
+      mt-4 sm:mt-6 md:mt-8
+      max-w-xl sm:max-w-3xl md:max-w-4xl 
+      mx-auto 
+      text-base sm:text-lg md:text-xl
+      leading-relaxed
+    ">
+      Aditya Exports is a government-recognized fresh vegetable exporter from India,
+      operating in full compliance with Indian export regulations and global trade
+      standards. We follow strict quality control, food safety protocols, and
+      international export requirements for fresh vegetable shipments worldwide.
+    </p>
 
-
-
-
-  {/* Certificate 1 */}
-
-
-  <div
-  className="bg-gray-50 rounded-2xl shadow-md 
-  hover:shadow-xl transition duration-300 
-  p-5 sm:p-6 text-center"
->
-  <div className="relative">
-    <img
-      src="/Fssai.webp"
-      alt="FSSAI Certificate"
-      className="w-full 
-      h-48 sm:h-56 md:h-64 
-      object-contain rounded-lg"
-    />
-
-    {/* Coming Soon Overlay */}
-    <div className="absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
-      <span className="text-white text-lg sm:text-xl font-bold tracking-wide">
-        Coming Soon
-      </span>
-    </div>
   </div>
 
-  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mt-4">
-    FSSAI Certified
-  </h3>
-</div>
+  {/* Certificate Grid */}
+  <div className="
+    mt-12 sm:mt-16 md:mt-20
+    max-w-6xl mx-auto
+    grid grid-cols-1 
+    sm:grid-cols-2 
+    lg:grid-cols-3
+    gap-6 sm:gap-8 md:gap-10
+  ">
 
-          {/* Certificate 2 */}
-          <div
-  className="bg-gray-50 rounded-2xl shadow-md 
-  hover:shadow-xl transition duration-300 
-  p-5 sm:p-6 text-center"
->
-  <div className="relative">
-    <img
-      src="/iso.png"
-      alt="ISO Certificate"
-      className="w-full 
-      h-48 sm:h-56 md:h-64 
-      object-contain rounded-lg"
-    />
+    {/* CARD COMPONENT STYLE */}
+    {[
+      {
+        img: "/Fssai.webp",
+        alt: "FSSAI Certified Fresh Vegetable Exporter India",
+        title: "FSSAI Certified",
+      },
+      {
+        img: "/iso.png",
+        alt: "ISO Certified Indian Vegetable Export Company",
+        title: "ISO Certified",
+      },
+      {
+        img: "/Apeda.webp",
+        alt: "APEDA Registered Exporter from India",
+        title: "APEDA Registered",
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
+        className="
+          bg-gray-50 
+          rounded-3xl 
+          shadow-md 
+          hover:shadow-2xl 
+          hover:-translate-y-2
+          transition duration-300
+          p-5 sm:p-6 
+          text-center
+        "
+      >
+        <div className="relative">
+          <img
+            src={item.img}
+            alt={item.alt}
+            className="
+              w-full 
+              h-44 sm:h-52 md:h-60 
+              object-contain 
+              rounded-xl
+            "
+          />
 
-    {/* Coming Soon Overlay */}
-    <div className="absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
-      <span className="text-white text-lg sm:text-xl font-bold tracking-wide">
-        Coming Soon
-      </span>
-    </div>
-  </div>
-
-  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mt-4">
-    ISO Certified
-  </h3>
-</div>
-
-          {/* Certificate 3 */}
-         <div
-  className="bg-gray-50 rounded-2xl shadow-md 
-  hover:shadow-xl transition duration-300 
-  p-5 sm:p-6 text-center"
->
-  <div className="relative">
-    <img
-      src="/Apeda.webp"
-      alt="APEDA Certificate"
-      className="w-full 
-      h-48 sm:h-56 md:h-64 
-      object-contain rounded-lg"
-    />
-
-    {/* Coming Soon Overlay */}
-    <div className="absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
-      <span className="text-white text-lg sm:text-xl font-bold tracking-wide">
-        Coming Soon
-      </span>
-    </div>
-  </div>
-
-  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mt-4">
-    APEDA Registered
-  </h3>
-</div>
+          {/* Coming Soon Overlay */}
+          <div className="
+            absolute inset-0 
+            bg-black/60 
+            rounded-xl 
+            flex items-center justify-center
+            opacity-90
+          ">
+            <span className="
+              text-white 
+              text-base sm:text-lg 
+              font-semibold 
+              tracking-wide
+            ">
+              Coming Soon
+            </span>
+          </div>
         </div>
-      </div>
 
-     <div className="py-14 sm:py-16 md:py-20 bg-gray-100 px-4 sm:px-6 lg:px-8">
-  <h2
-    className="text-3xl sm:text-4xl md:text-5xl 
-    font-bold text-center text-gray-800 
-    mt-10 sm:mt-14 md:mt-20 leading-tight"
-  >
-    Our Fresh Products
+        <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mt-4">
+          {item.title}
+        </h3>
+      </div>
+    ))}
+
+  </div>
+</section>
+{/* ABOUT SEO SECTION */}
+<section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white px-4 sm:px-6 md:px-10">
+  <div className="max-w-xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto text-center">
+    
+    <h2 className="
+      text-2xl 
+      sm:text-3xl 
+      md:text-4xl 
+      lg:text-5xl 
+      font-bold 
+      text-gray-800
+      leading-snug
+    ">
+      Trusted Indian Fresh Vegetable Export Company
+    </h2>
+
+    <p className="
+      mt-4 sm:mt-6 md:mt-8
+      text-gray-700
+      text-base sm:text-lg md:text-xl
+      leading-relaxed
+    ">
+      Aditya Exports specializes in bulk export of fresh vegetables from
+      India including onion, potato, tomato, ginger and green chilli. We
+      supply to UAE, USA and European markets with competitive pricing,
+      export-grade packaging and on-time global shipment.
+    </p>
+
+  </div>
+</section>
+
+  {/* PRODUCTS SECTION */}
+<section className="py-16 sm:py-20 md:py-24 bg-gray-100 px-4 sm:px-6 md:px-10">
+  
+  <h2 className="
+    text-2xl 
+    sm:text-3xl 
+    md:text-4xl 
+    lg:text-5xl 
+    font-bold 
+    text-center 
+    text-gray-800
+  ">
+    Export Quality Fresh Vegetables from India
   </h2>
 
-  <p
-    className="text-center text-gray-600 
+  <p className="
+    text-center 
+    text-gray-600 
     mt-4 sm:mt-6 
-    max-w-xl sm:max-w-2xl mx-auto 
-    text-base sm:text-lg md:text-2xl"
-  >
-    We export high-quality farm-fresh vegetables carefully selected to
-    meet international standards.
+    max-w-xl sm:max-w-2xl md:max-w-4xl 
+    mx-auto 
+    text-base sm:text-lg md:text-xl
+    leading-relaxed
+  ">
+    We export bulk fresh vegetables from India for international buyers in
+    UAE, USA and Europe.
   </p>
 
-  <div className="mt-10 sm:mt-12 max-w-6xl mx-auto">
+  <div className="
+    mt-10 sm:mt-12 md:mt-16
+    max-w-6xl mx-auto
+    grid grid-cols-1 
+    sm:grid-cols-2 
+    lg:grid-cols-3 
+    gap-6 sm:gap-8
+  ">
     
-    {/* First Row */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-
-      {/* Product Card */}
-      {[
-        { src: "/onion.webp", name: "Onion", desc: "Fresh, premium quality onions sourced directly from trusted farms." },
-        { src: "/potato.webp", name: "Potato", desc: "High-grade potatoes ideal for global markets and bulk supply." },
-        { src: "/ginger.webp", name: "Ginger", desc: "Naturally grown ginger with rich aroma and superior freshness." }
-      ].map((product, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-xl shadow-md hover:shadow-xl 
-          transition duration-300 p-5 sm:p-6 text-center"
-        >
-          <div className="relative group">
-            <img
-              src={product.src}
-              alt={product.name}
-              className="w-full h-44 sm:h-48 md:h-52 object-cover 
-              rounded-lg transition duration-300 group-hover:scale-105"
-            />
-
-            {/* Coming Soon Overlay */}
-            <div className="absolute inset-0 bg-black/60 rounded-lg 
-              flex items-center justify-center">
-              <span className="text-white text-lg font-bold tracking-wide">
-                Coming Soon
-              </span>
-            </div>
-          </div>
-
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mt-4">
-            {product.name}
-          </h3>
-          <p className="mt-2 text-gray-600 text-xs sm:text-sm">
-            {product.desc}
-          </p>
-        </div>
-      ))}
-
+    {/* Onion */}
+    <div className="
+      bg-white rounded-2xl shadow-md 
+      hover:shadow-2xl hover:-translate-y-2 
+      transition duration-300 
+      p-5 sm:p-6 text-center
+    ">
+      <img
+        src="/onion.webp"
+        alt="Fresh Onion Exporter from India supplying UAE USA Europe"
+        className="w-full h-40 sm:h-48 md:h-52 object-cover rounded-xl"
+      />
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mt-4">
+        Fresh Onion Exporter
+      </h3>
+      <p className="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed">
+        Export-quality fresh onions supplied in bulk for international
+        markets.
+      </p>
     </div>
 
-    {/* Second Row */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mt-8 md:w-2/3 mx-auto">
+    {/* Potato */}
+    <div className="
+      bg-white rounded-2xl shadow-md 
+      hover:shadow-2xl hover:-translate-y-2 
+      transition duration-300 
+      p-5 sm:p-6 text-center
+    ">
+      <img
+        src="/potato.webp"
+        alt="Premium Potato Exporter from India for UAE USA Europe"
+        className="w-full h-40 sm:h-48 md:h-52 object-cover rounded-xl"
+      />
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mt-4">
+        Fresh Potato Supplier
+      </h3>
+      <p className="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed">
+        High-grade Indian potatoes supplied in bulk for global export.
+      </p>
+    </div>
 
-      {[
-        { src: "/tomato.webp", name: "Tomato", desc: "Juicy, vibrant tomatoes carefully selected for export quality." },
-        { src: "/greenchilli.webp", name: "Green Chilli", desc: "Fresh and spicy green chillies packed with flavor and quality." }
-      ].map((product, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-xl shadow-md hover:shadow-xl 
-          transition duration-300 p-5 sm:p-6 text-center"
-        >
-          <div className="relative group">
-            <img
-              src={product.src}
-              alt={product.name}
-              className="w-full h-44 sm:h-48 md:h-52 object-cover 
-              rounded-lg transition duration-300 group-hover:scale-105"
-            />
-
-            {/* Coming Soon Overlay */}
-            <div className="absolute inset-0 bg-black/60 rounded-lg 
-              flex items-center justify-center">
-              <span className="text-white text-lg font-bold tracking-wide">
-                Coming Soon
-              </span>
-            </div>
-          </div>
-
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mt-4">
-            {product.name}
-          </h3>
-          <p className="mt-2 text-gray-600 text-xs sm:text-sm">
-            {product.desc}
-          </p>
-        </div>
-      ))}
-
+    {/* Ginger */}
+    <div className="
+      bg-white rounded-2xl shadow-md 
+      hover:shadow-2xl hover:-translate-y-2 
+      transition duration-300 
+      p-5 sm:p-6 text-center
+    ">
+      <img
+        src="/ginger.webp"
+        alt="Indian Fresh Ginger Exporter for International Markets"
+        className="w-full h-40 sm:h-48 md:h-52 object-cover rounded-xl"
+      />
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mt-4">
+        Fresh Ginger Exporter
+      </h3>
+      <p className="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed">
+        Naturally grown Indian ginger exported with premium packaging.
+      </p>
     </div>
 
   </div>
-</div>
-      {/* Export Countries Section */}
-      <div className="py-14 sm:py-16 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
-        <h2
-          className="text-3xl sm:text-4xl md:text-5xl 
-  font-bold text-center text-gray-800 leading-tight"
-        >
-          Exporting Worldwide
-        </h2>
+</section>
 
-        <p
-          className="text-center text-gray-600 
-  mt-4 sm:mt-6 
-  max-w-xl sm:max-w-2xl mx-auto 
-  text-base sm:text-lg md:text-xl"
-        >
-          Serving international markets with premium-quality vegetables and
-          reliable global logistics.
+      {/* EXPORT SECTION */}
+     <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white px-4 sm:px-6 md:px-10">
+  <h2 className="
+    text-2xl 
+    sm:text-3xl 
+    md:text-4xl 
+    lg:text-5xl 
+    font-bold 
+    text-center 
+    text-gray-800
+    leading-snug
+  ">
+    Fresh Vegetable Exporter from India to UAE, USA & Europe
+  </h2>
+
+  <p className="
+    text-center 
+    text-gray-600 
+    mt-6 sm:mt-8 md:mt-10 
+    max-w-xl sm:max-w-3xl md:max-w-5xl lg:max-w-6xl 
+    mx-auto 
+    text-base sm:text-lg md:text-xl
+    leading-relaxed
+  ">
+          Aditya Exports is a trusted fresh vegetable exporter from India,
+          supplying premium-quality farm-fresh vegetables to the UAE, USA, and
+          European countries. We specialize in international vegetable exports
+          with reliable cold-chain logistics, strict quality control, and timely
+          global shipments. As a leading Indian vegetable export company, we
+          maintain strong trade partnerships across Dubai and other UAE markets,
+          major US import hubs, and key European destinations. Our focus on
+          consistent quality, competitive export pricing, and safe packaging
+          ensures long-term relationships with global importers, wholesalers,
+          and distributors.
         </p>
+      </section>
 
-        {/* Countries Grid */}
-        <div
-          className="mt-10 sm:mt-14 md:mt-16 
-  max-w-6xl mx-auto 
-  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
-  gap-6 sm:gap-8 text-center"
-        >
-          <div
-            className="bg-gray-50 rounded-xl p-5 sm:p-6 
-    shadow-md hover:shadow-xl transition duration-300"
-          >
-            <div className="text-3xl sm:text-4xl mb-3">🇦🇪</div>
-            <h3 className="font-semibold text-gray-800 text-sm sm:text-base">
-              UAE
-            </h3>
-          </div>
-
-          <div
-            className="bg-gray-50 rounded-xl p-5 sm:p-6 
-    shadow-md hover:shadow-xl transition duration-300"
-          >
-            <div className="text-3xl sm:text-4xl mb-3">🇸🇦</div>
-            <h3 className="font-semibold text-gray-800 text-sm sm:text-base">
-              Saudi Arabia
-            </h3>
-          </div>
-
-          <div
-            className="bg-gray-50 rounded-xl p-5 sm:p-6 
-    shadow-md hover:shadow-xl transition duration-300"
-          >
-            <div className="text-3xl sm:text-4xl mb-3">🇬🇧</div>
-            <h3 className="font-semibold text-gray-800 text-sm sm:text-base">
-              United Kingdom
-            </h3>
-          </div>
-
-          <div
-            className="bg-gray-50 rounded-xl p-5 sm:p-6 
-    shadow-md hover:shadow-xl transition duration-300"
-          >
-            <div className="text-3xl sm:text-4xl mb-3">🇪🇺</div>
-            <h3 className="font-semibold text-gray-800 text-sm sm:text-base">
-              Europe
-            </h3>
-          </div>
-        </div>
-
-        {/* Trust Line */}
-        <p
-          className="text-center text-gray-700 
-  mt-10 sm:mt-12 
-  text-sm sm:text-base md:text-lg"
-        >
-          Proudly serving 10+ countries with trusted export partnerships.
-        </p>
-      </div>
-      {/* GLOBAL EXPORT SECTION */}
       <div
         className="relative py-16 sm:py-20 md:py-28 
 bg-gradient-to-b from-blue-50 via-blue-100 to-white 

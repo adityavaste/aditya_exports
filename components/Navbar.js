@@ -20,19 +20,19 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 lg:space-x-8 text-gray-700 font-medium text-sm md:text-base">
-          <a href="Home" className="hover:text-green-700 transition">
+          <a href="/landing" className="hover:text-green-700 transition">
             Home
           </a>
-          <a href="About_us" className="hover:text-green-700 transition">
+          <a href="/about-us" className="hover:text-green-700 transition">
             About us
           </a>
-          <a href="Products" className="hover:text-green-700 transition">
+          <a href="/products/product-page" className="hover:text-green-700 transition">
             Products
           </a>
-          <a href="Why_choose_us" className="hover:text-green-700 transition">
+          <a href="/why-choose-us" className="hover:text-green-700 transition">
             Why choose us
           </a>
-          <a href="Contact" className="hover:text-green-700 transition">
+          <a href="/contact" className="hover:text-green-700 transition">
             Contact
           </a>
         </div>
